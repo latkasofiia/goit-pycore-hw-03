@@ -27,7 +27,8 @@ def get_upcoming_birthdays(users):
         days_until = (birthday_this_year - today).days
 
         if 0 <= days_until <= 7:
-            # Перевірте, чи день народження припадає на вихідний, якщо так то переносим дату 
+            
+            # Перевіряємо, чи день народження припадає на вихідний, якщо так то переносим дату 
             if birthday_this_year.weekday() == 5: 
                 birthday_this_year += timedelta(days=2)
             elif birthday_this_year.weekday() == 6:  

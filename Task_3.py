@@ -1,6 +1,15 @@
+# Список номерів
+raw_numbers = [
+    "    +38(050)123-32-34",
+    "     0503451234",
+    "(050)8889900",
+    "38050-111-22-22",
+    "38050 111 22 11   ",
+]
+
 # Створюємо функцію 
 def normalize_phone(phone_number):
-    
+
     # Видаляємо пробіли, дужки, тире
     cleaned = phone_number.replace(" ", "").replace("(", "").replace(")", "").replace("-", "")
     
@@ -16,14 +25,6 @@ def normalize_phone(phone_number):
     
     return cleaned
 
-# Список номерів
-raw_numbers = [
-    "    +38(050)123-32-34",
-    "     0503451234",
-    "(050)8889900",
-    "38050-111-22-22",
-    "38050 111 22 11   ",
-]
 
 # Нормалізуємо номери
 sanitized_numbers = [normalize_phone(num) for num in raw_numbers]
